@@ -1,0 +1,203 @@
+
+[2018-06-14 10:35:08] Traceback (most recent call last):
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 196, in <module>
+    main()
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 67, in main
+    callback = browser.JavascriptCallback();
+AttributeError: 'cefpython_py36.PyBrowser' object has no attribute 'JavascriptCallback'
+
+
+[2018-06-14 10:40:25] Traceback (most recent call last):
+  File "python_callback.pyx", line 83, in cefpython_py36.ExecutePythonCallback (cefpython_py36.cpp:48813)
+TypeError: py_callback() takes 1 positional argument but 3 were given
+
+
+[2018-06-14 10:41:08] Traceback (most recent call last):
+  File "python_callback.pyx", line 83, in cefpython_py36.ExecutePythonCallback (cefpython_py36.cpp:48813)
+TypeError: add_organism() missing 2 required positional arguments: 'x' and 'y'
+
+
+[2018-06-14 10:51:38] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 185, in add_organism
+    print(name + ": " + x + ", " + y)
+TypeError: must be str, not int
+
+
+[2018-06-14 10:59:52] Traceback (most recent call last):
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 150, in <module>
+    main()
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 146, in main
+    desiigner = Desiigner()
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 68, in __init__
+    self.set_client_handlers()
+AttributeError: 'Desiigner' object has no attribute 'set_client_handlers'
+
+
+[2018-06-14 11:00:47] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 95, in html_to_data_uri
+    "Called from Javascript. Will call Javascript callback now.")
+TypeError: js_print() takes 4 positional arguments but 5 were given
+
+
+[2018-06-14 11:01:18] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 135, in test_multiple_callbacks
+    self.desiigner.js_print(self.browser, "Python", "test_multiple_callbacks", "Called from Javascript. Will call Javascript callback now.")
+AttributeError: 'cefpython_py36.PyBrowser' object has no attribute 'js_print'
+
+
+[2018-06-14 11:01:26] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 135, in test_multiple_callbacks
+    self.desiigner.js_print("Python", "test_multiple_callbacks", "Called from Javascript. Will call Javascript callback now.")
+AttributeError: 'cefpython_py36.PyBrowser' object has no attribute 'js_print'
+
+
+[2018-06-14 11:01:58] Traceback (most recent call last):
+  File "python_callback.pyx", line 83, in cefpython_py36.ExecutePythonCallback (cefpython_py36.cpp:48813)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 138, in py_callback
+    self.desiigner.js_print(self.browser, "Python", "py_callback", msg_from_js)
+AttributeError: 'External' object has no attribute 'browser'
+
+
+[2018-06-14 11:15:25] Traceback (most recent call last):
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 178, in <module>
+    main()
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 174, in main
+    desiigner = Desiigner(Simulator(15, 15))
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 92, in __init__
+    self.set_javascript_bindings()
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 137, in set_javascript_bindings
+    external = External(self)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 155, in __init__
+    self.desiigner.ExecuteFunction("drawGrid", "square", self.desiigner.simulator.size.x, self.desiigner.simulator.size.y)
+AttributeError: 'Desiigner' object has no attribute 'ExecuteFunction'
+
+
+[2018-06-14 12:03:02] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 266, in add_organism
+    self.desiigner.simulator.add_organism(Position(x, y), eval(name)())
+TypeError: 'int' object is not callable
+
+
+[2018-06-14 12:03:28] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 266, in add_organism
+    self.desiigner.simulator.add_organism(Position(x, y), eval(name)())
+TypeError: __init__() missing 2 required positional arguments: 'world' and 'position'
+
+
+[2018-06-14 12:04:38] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 267, in add_organism
+    self.desiigner.simulator.add_organism(position, eval(name)(self.desiigner.simulator, position))
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\world.py", line 29, in add_organism
+    if self.isempty(position) is False:
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\world.py", line 42, in isempty
+    if self.isinworld(position) is False:
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\world.py", line 37, in isinworld
+    if 0 <= position.x < self.size.x and 0 <= position.y < self.size.y:
+TypeError: '<=' not supported between instances of 'int' and 'str'
+
+
+[2018-06-14 14:31:46] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 379, in turn
+    self.desiigner.simulator.execute_turn(Position(int(x), int(y)))
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\simulator.py", line 85, in execute_turn
+    organism.action()
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\animals\fox.py", line 19, in action
+    if self.world.isempty(position) is True or self.world.find_organism(position).strength() < self.strength:
+TypeError: 'int' object is not callable
+
+
+[2018-06-14 15:13:26] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 418, in turn
+    self.desiigner.simulator.execute_turn(Position(int(x), int(y)))
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\simulator.py", line 84, in execute_turn
+    organism.action(move)
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\animals\human.py", line 24, in action
+    self.move(Position(delta.x, delta.y) + self.position)
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\animal.py", line 27, in move
+    self.collision(self, enemy)
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\organism.py", line 21, in collision
+    if isinstance(attacker, defender.__class__.__name__) is True:
+TypeError: isinstance() arg 2 must be a type or tuple of types
+
+
+[2018-06-14 15:13:59] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 418, in turn
+    self.desiigner.simulator.execute_turn(Position(int(x), int(y)))
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\simulator.py", line 86, in execute_turn
+    organism.action()
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\animals\antelope.py", line 13, in action
+    self.move(self.world.nearby_area(self.position, 2))
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\animal.py", line 27, in move
+    self.collision(self, enemy)
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\organism.py", line 32, in collision
+    if attacker.strength() >= defender.strength():
+TypeError: 'int' object is not callable
+
+
+[2018-06-14 15:16:07] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 418, in turn
+    self.desiigner.simulator.execute_turn(Position(int(x), int(y)))
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\simulator.py", line 86, in execute_turn
+    organism.action()
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\animals\turtle.py", line 15, in action
+    self.move(self.world.nearby_area(self.position, 1))
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\animal.py", line 27, in move
+    self.collision(self, enemy)
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\organism.py", line 26, in collision
+    if self.check_collision(defender) is False:
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\animals\turtle.py", line 18, in check_collision
+    if other.strength() < 5:
+TypeError: 'int' object is not callable
+
+
+[2018-06-14 16:14:17] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 460, in turn
+    self.desiigner.simulator.execute_turn(Position(int(x), int(y)))
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\simulator.py", line 87, in execute_turn
+    organism.action()
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\animals\cybersheep.py", line 26, in action
+    return Sheep.action()
+TypeError: action() missing 1 required positional argument: 'self'
+
+
+[2018-06-14 16:14:43] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 460, in turn
+    self.desiigner.simulator.execute_turn(Position(int(x), int(y)))
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\simulator.py", line 87, in execute_turn
+    organism.action()
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\animals\cybersheep.py", line 21, in action
+    if self.world.distance(self.position, organism.position) < self.world.distance(self.position, so.position):
+AttributeError: 'Simulator' object has no attribute 'distance'
+
+
+[2018-06-14 16:30:56] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 467, in add_organism
+    self.desiigner.simulator.add_organism(position, eval(name)(self.desiigner.simulator, position))
+  File "<string>", line 1, in <module>
+NameError: name 'PineBorscht' is not defined
+
+
+[2018-06-14 16:46:07] Traceback (most recent call last):
+  File "v8function_handler.pyx", line 42, in cefpython_py36.V8FunctionHandler_Execute (cefpython_py36.cpp:98999)
+  File "C:/Users/Dawid Martenczuk/PycharmProjects/virtualworld/desiigner.py", line 462, in turn
+    self.desiigner.simulator.execute_turn(Position(int(x), int(y)))
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\simulator.py", line 88, in execute_turn
+    organism.action()
+  File "C:\Users\Dawid Martenczuk\PycharmProjects\virtualworld\world\animals\cybersheep.py", line 35, in action
+    self.move(self.signum(self.position.x - so.position.x), self.signum(self.position.y - so.position.y))
+TypeError: move() takes 2 positional arguments but 3 were given
+
